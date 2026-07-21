@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "rootDir": "./proto-ui",
+  "stylesDir": "./src/styles",
+  "styles": {
+    "enabled": true,
+    "preset": "shadcn"
+  },
+  "adapters": {
+    "react": {
+      "package": "@proto.ui/adapter-react"
+    }
+  },
+  "components": {
+    "react": [
+      "shadcn-button"
+    ]
+  }
+}

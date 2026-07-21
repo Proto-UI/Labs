@@ -1,3 +1,5 @@
+@import './styles/proto-ui-style.css';
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;

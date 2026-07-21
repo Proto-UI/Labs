@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@proto.ui/adapter-react": "0.2.0-rc.0",
+    "@proto.ui/prototypes-shadcn": "0.2.0-rc.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
