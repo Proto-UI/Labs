@@ -1,11 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
+import heroImg from "./assets/hero.png";
+import "./App.css";
+import "./styles/proto-ui-style.css";
+
+import {
+  ShadcnButton,
+  ShadcnDialogClose,
+  ShadcnDialogContent,
+  ShadcnDialogMask,
+  ShadcnDialogRoot,
+  ShadcnDialogTrigger,
+  ShadcnSwitchRoot,
+  ShadcnSwitchThumb,
+} from "../proto-ui/components/react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -21,13 +33,27 @@ function App() {
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
         </div>
-        <button
-          type="button"
-          className="counter"
+        <ShadcnButton
+          disabled={false}
           onClick={() => setCount((count) => count + 1)}
         >
           Count is {count}
-        </button>
+        </ShadcnButton>
+        <ShadcnSwitchRoot>
+          <ShadcnSwitchThumb />
+        </ShadcnSwitchRoot>
+
+        <ShadcnDialogRoot>
+          <ShadcnDialogTrigger>Open Dialog</ShadcnDialogTrigger>
+          <ShadcnDialogMask></ShadcnDialogMask>
+          <ShadcnDialogContent>
+            <h2>Dialog Content</h2>
+            <p>This is the content of the dialog.</p>
+            <ShadcnDialogClose>
+              {/* <ShadcnButton variant='outline'>Close</ShadcnButton> */}
+            </ShadcnDialogClose>
+          </ShadcnDialogContent>
+        </ShadcnDialogRoot>
       </section>
 
       <div className="ticks"></div>
@@ -116,7 +142,7 @@ function App() {
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

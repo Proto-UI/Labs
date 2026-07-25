@@ -24,7 +24,7 @@ function App() {
           </p>
         </div>
 
-        <ShadcnButton disabled onClick={() => setCount((count) => count + 1)}>
+        <ShadcnButton onClick={() => setCount((count) => count + 1)}>
           Count is {count}
         </ShadcnButton>
       </section>
